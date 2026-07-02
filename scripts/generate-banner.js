@@ -13,7 +13,7 @@
  *   node scripts/generate-banner.js [options]
  *
  * Options:
- *   --text     "Your Name"        Text to display on the banner
+ *   --text     "Praveen"        Text to display on the banner
  *   --type     hero|footer        Banner type (default: hero)
  *   --colors   "#7c3aed,#06b6d4"  Comma-separated gradient colors
  *   --output   path/to/file.svg   Output file path
@@ -34,7 +34,7 @@ const path = require("path");
 // ── Default Configuration ────────────────────────────────────────────────────
 
 const DEFAULTS = {
-  text: "Your Name",
+  text: "Praveen",
   subtitle: "Full-Stack Developer | Open Source Enthusiast",
   type: "hero",
   colors: ["#7c3aed", "#06b6d4", "#ec4899"],
