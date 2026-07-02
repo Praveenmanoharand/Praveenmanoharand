@@ -70,7 +70,7 @@
 
   <!-- Main title -->
   <text x="600" y="120" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="bold" fill="white" filter="url(#glow)">
-    Hello, I'm Your Name 👋
+    Hello, I'm Praveen 👋
     <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
   </text>
 
