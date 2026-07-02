@@ -20,7 +20,7 @@
 - 💬 &nbsp; Ask me about **React, Node.js, TypeScript, or System Design**
 - ⚡ &nbsp; Fun fact: I debug with `console.log` and I'm not ashamed 😄
 - 🎯 &nbsp; **2026 Goals:** Contribute to 50+ open source projects
-- 📫 &nbsp; Reach me at: **your.email@example.com**
+- 📫 &nbsp; Reach me at: **mppraveen110@gmail.com**
 
 <br clear="both"/>
 
