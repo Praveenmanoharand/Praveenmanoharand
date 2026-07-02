@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Desk -->
+  <rect x="50" y="280" width="400" height="15" rx="3" fill="#334155"/>
+  <rect x="80" y="295" width="10" height="60" fill="#475569"/>
+  <rect x="410" y="295" width="10" height="60" fill="#475569"/>
+
+  <!-- Monitor -->
+  <rect x="120" y="100" width="260" height="170" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <rect x="130" y="110" width="240" height="145" rx="5" fill="url(#screenGrad)"/>
+  <!-- Monitor stand -->
+  <rect x="230" y="270" width="40" height="15" fill="#475569"/>
+  <rect x="210" y="278" width="80" height="5" rx="2" fill="#64748b"/>
+
+  <!-- Code lines on screen -->
+  <rect x="145" y="125" width="80" height="4" rx="2" fill="#7c3aed" opacity="0.8">
+    <animate attributeName="width" values="80;100;80" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="145" y="138" width="120" height="4" rx="2" fill="#06b6d4" opacity="0.6"/>
+  <rect x="145" y="151" width="60" height="4" rx="2" fill="#a78bfa" opacity="0.5"/>
+  <rect x="160" y="164" width="100" height="4" rx="2" fill="#22d3ee" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="160" y="177" width="85" height="4" rx="2" fill="#7c3aed" opacity="0.5"/>
+  <rect x="145" y="190" width="110" height="4" rx="2" fill="#06b6d4" opacity="0.7"/>
+  <rect x="145" y="203" width="70" height="4" rx="2" fill="#a78bfa" opacity="0.4"/>
+  <rect x="160" y="216" width="90" height="4" rx="2" fill="#22d3ee" opacity="0.5"/>
+  <rect x="145" y="229" width="50" height="4" rx="2" fill="#7c3aed" opacity="0.6"/>
+
+  <!-- Cursor blink on screen -->
+  <rect x="200" y="229" width="2" height="8" fill="#06b6d4">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Coffee mug -->
+  <rect x="60" y="250" width="30" height="30" rx="3" fill="#7c3aed"/>
+  <path d="M90,255 C100,255 100,275 90,275" fill="none" stroke="#7c3aed" stroke-width="3"/>
+  <!-- Steam -->
+  <path d="M70,245 C72,235 78,240 75,230" fill="none" stroke="rgba(124,58,237,0.4)" stroke-width="1.5">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;3,-5;0,0" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Plant pot -->
+  <rect x="395" y="240" width="30" height="40" rx="2" fill="#475569"/>
+  <ellipse cx="410" cy="240" rx="18" ry="5" fill="#22c55e" opacity="0.8"/>
+  <line x1="410" y1="235" x2="405" y2="210" stroke="#22c55e" stroke-width="2"/>
+  <line x1="410" y1="235" x2="418" y2="215" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="405" cy="208" r="5" fill="#22c55e" opacity="0.6"/>
+  <circle cx="418" cy="213" r="4" fill="#22c55e" opacity="0.5"/>
+
+  <!-- Developer figure (simplified) -->
+  <circle cx="250" cy="60" r="25" fill="url(#deskGrad)" opacity="0.3"/>
+  <circle cx="250" cy="55" r="15" fill="#f8fafc"/>
+  <rect x="237" y="72" width="26" height="30" rx="5" fill="#7c3aed" opacity="0.8"/>
+</svg>

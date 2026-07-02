@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1.5" fill="rgba(124,58,237,0.15)">
+        <animate attributeName="r" values="1.5;2;1.5" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="rgba(124,58,237,0.15);rgba(6,182,212,0.15);rgba(124,58,237,0.15)" dur="6s" repeatCount="indefinite"/>
+      </circle>
+    </pattern>
+  </defs>
+  <rect width="100" height="100" fill="url(#dotPattern)"/>
+</svg>

@@ -1,0 +1,56 @@
+# ============================================================================
+# 🔄 Auto-Compose README from Components
+# ============================================================================
+# Dynamically regenerates README.md by composing all markdown files from
+# /components in the correct order. Uses scripts/update-stats.js.
+# Trigger: On push to main (when components/ or scripts/ change).
+# ============================================================================
+
+name: Update README
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "components/**"
+      - "scripts/**"
+      - "assets/**"
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      # ── Checkout repository ─────────────────────────────────────────────
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Setup Node.js ──────────────────────────────────────────────────
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # ── Install dependencies ────────────────────────────────────────────
+      - name: Install Dependencies
+        run: npm ci --ignore-scripts || npm install
+
+      # ── Compose README.md from components ───────────────────────────────
+      - name: Compose README.md
+        run: node scripts/update-stats.js
+
+      # ── Commit and push changes ─────────────────────────────────────────
+      - name: Commit Updated README
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "📝 Auto-compose README from components [skip ci]"
+          git push

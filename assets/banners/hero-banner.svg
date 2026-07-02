@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Animated gradient: purple → cyan → purple loop -->
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed">
+        <animate attributeName="stop-color" values="#7c3aed;#06b6d4;#ec4899;#7c3aed" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#06b6d4">
+        <animate attributeName="stop-color" values="#06b6d4;#ec4899;#7c3aed;#06b6d4" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#ec4899">
+        <animate attributeName="stop-color" values="#ec4899;#7c3aed;#06b6d4;#ec4899" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Particle animation -->
+    <circle id="particle" r="2" fill="rgba(255,255,255,0.6)">
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#heroGrad)" rx="0"/>
+
+  <!-- Floating particles -->
+  <use href="#particle" x="100" y="50">
+    <animateTransform attributeName="transform" type="translate" values="0,0;20,-30;0,0" dur="4s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="300" y="120">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-15,25;0,0" dur="5s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="500" y="80">
+    <animateTransform attributeName="transform" type="translate" values="0,0;25,-20;0,0" dur="3.5s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="700" y="200">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-20,15;0,0" dur="4.5s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="900" y="60">
+    <animateTransform attributeName="transform" type="translate" values="0,0;15,-25;0,0" dur="3.8s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="1050" y="180">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-10,20;0,0" dur="5.2s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="200" y="220">
+    <animateTransform attributeName="transform" type="translate" values="0,0;18,-15;0,0" dur="4.2s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="800" y="100">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-22,18;0,0" dur="3.3s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="450" y="250">
+    <animateTransform attributeName="transform" type="translate" values="0,0;12,-22;0,0" dur="4.8s" repeatCount="indefinite"/>
+  </use>
+  <use href="#particle" x="650" y="40">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-18,28;0,0" dur="5.5s" repeatCount="indefinite"/>
+  </use>
+
+  <!-- Wave decoration at bottom -->
+  <path d="M0,260 C200,230 400,280 600,250 C800,220 1000,270 1200,240 L1200,300 L0,300 Z" fill="rgba(0,0,0,0.15)">
+    <animate attributeName="d" values="M0,260 C200,230 400,280 600,250 C800,220 1000,270 1200,240 L1200,300 L0,300 Z;M0,250 C200,270 400,230 600,260 C800,240 1000,220 1200,250 L1200,300 L0,300 Z;M0,260 C200,230 400,280 600,250 C800,220 1000,270 1200,240 L1200,300 L0,300 Z" dur="8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Main title -->
+  <text x="600" y="120" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="bold" fill="white" filter="url(#glow)">
+    Hello, I'm Your Name 👋
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="170" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.9)">
+    Full-Stack Developer · Open Source Enthusiast · Tech Explorer
+    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze"/>
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="210" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.7)" font-style="italic">
+    Building the future, one commit at a time ✨
+    <animate attributeName="opacity" values="0;1" dur="2s" fill="freeze"/>
+  </text>
+</svg>
